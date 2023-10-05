@@ -1,7 +1,29 @@
-const makeDropDown = (function () {
+const generalFuncModule = (function () {
+  const doc = document;
+  const insertElement = function (
+    elementType,
+    elementClass,
+    elementContent,
+    elementParrent,
+    elementImgSrc,
+  ) {
+    const element = doc.createElement(elementType);
+    element.className = elementClass;
+    element.textContent = elementContent;
+    if (elementType === "img") {
+      element.src = elementImgSrc;
+    }
+    elementParrent.appendChild(element);
+    return element;
+  };
+  const clearDom = function (parrent, inputClass) {
+    const elementArray = parrent.querySelectorAll(inputClass);
+    for (let i = 0; i < elementArray.length; i++) {
+      parrent.removeChild(elementArray[i]);
+    }
+  };
 
-    const testing = function(){console.log("test")}
-  const addMenu = function (element, button, menuClass, menuItemClass) {
+  const addDropDownMenu = function (element, button, menuClass, menuItemClass) {
     button.addEventListener("click", function () {
       showElements(element, menuClass, menuItemClass);
     });
@@ -22,7 +44,8 @@ const makeDropDown = (function () {
       }
     }
   };
-  return { addMenu, testing };
+
+  return { insertElement, clearDom, addDropDownMenu };
 })();
 
-module.exports = makeDropDown;
+module.exports = generalFuncModule;
