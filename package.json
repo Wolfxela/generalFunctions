@@ -1,6 +1,6 @@
 {
   "name": "general-functions-wolfxela",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "General Functions to use in projects!",
   "main": "index.js",
   "scripts": {
