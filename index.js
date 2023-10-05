@@ -1,4 +1,6 @@
 const makeDropDown = (function () {
+
+    const testing = function(){console.log("test")}
   const addMenu = function (element, button, menuClass, menuItemClass) {
     button.addEventListener("click", function () {
       showElements(element, menuClass, menuItemClass);
@@ -20,7 +22,7 @@ const makeDropDown = (function () {
       }
     }
   };
-  return { addMenu };
+  return { addMenu, testing };
 })();
 
-export { makeDropDown };
+module.exports = makeDropDown;

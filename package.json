@@ -1,12 +1,17 @@
 {
-  "name": "test-dropdown",
+  "name": "general-functions",
   "version": "1.0.0",
-  "description": "",
+  "description": "General Functions to use in projects!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository":
+  {"type":"git",
+   "url":"https://github.com/Wolfxela/generalFunctions.git"
+  },
+  "keywords": ["GEN"],
+  "author": "wolfxela",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.50.0",
